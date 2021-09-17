@@ -135,88 +135,19 @@ vim ~/.zshrc
 
 ## Install i3 layouts
 
-### clone private git
-mkdir ./repo; cd ./repo
-git clone https://github.com/volcan600/scripts.git
-
-# launch i3 layouts at startup
-cp -r ~/repo/scripts/personal.i3_layouts ~
-gnome-session-properties
-Click on Add > Name: i3_startup > Command: /home/mflores/.i3_layouts/startup_i3_workspaces.sh > Add > Close
-
-# Enable Night Light
+### Clone repo
+```bash
+git clone https://github.com/volcan600/my-regolith.git
+```
+## Enable Night Light
 Super + c > Displays > Night Light
 
-# Install custom theme
-sudo cp -r ./scripts/personal/astro-theme/astro /etc/regolith/styles/
-sudo cp -r ./scripts/personal/astro-theme/themes/* /usr/share/themes
-sudo cp -r ./scripts/personal/astro-theme/icons/* /usr/share/icons
-for f in ~/repo/scripts/personal/astro-theme/icons/*.tar.xz; do tar xf "$f"; done
+## Install astro theme
+sudo cp -r ./my-regolith/personal/astro-theme/astro /etc/regolith/styles/
+sudo cp -r ./my-regolith/personal/astro-theme/themes/* /usr/share/themes
+sudo cp -r ./my-regolith/personal/astro-theme/icons/* /usr/share/icons
+for f in ~/repo/my-regolith/personal/astro-theme/icons/*.tar.xz; do tar xf "$f"; done
 sudo mv ~/repo/Sweet-{Mars,Purple,Rainbow,Red,Yellow,Nebula} /usr/share/icons/
-for f in ~/repo/scripts/personal/astro-theme/themes/*.tar.xz; do tar xf "$f"; done
+for f in ~/repo/my-regolith/personal/astro-theme/themes/*.tar.xz; do tar xf "$f"; done
 sudo mv ~/repo/Sweet-{Dark,mars} /usr/share/themes/
-mkdir ~/Pictures/FavoriteWallpapers; cp ./scripts/personal/astro-theme/astronaut.jpg ~/Pictures/FavoriteWallpapers
-
-# Install personal packages
-slack
-sublime
-google-chrome
-firefox
-telegram
-anydesk
-spotify
-vmware
-minecraft
-steam
-zoom
-visualstudio
-brave
-discord
-vlc-media
-libreoffice
-flameshot #enable flameshot in startup
-dropbox
-teams
-wireshark
-dbeaver
-anaconda
-  find anaconda-navigador in cli
-  vim ../.local/share/applications/anaconda-navigator.desktop
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Name=Anaconda
-Version=2.0
-Type=Application
-Exec=/home/mflores/anaconda3/bin/anaconda-navigator
-Icon=/home/mflores/anaconda3/lib/python3.8/site-packages/anaconda_navigator/static/images/anaconda-icon-256x256.png
-Comment=Open Anaconda Navigator
-Terminal=false
-minikube
-docker
-gitkraken
-
-Installation Ubuntu - Marlon 2021
-- Sign in on google and microsoft
-- update the system
-sudo apt update -y && sudo apt upgrade -y
-- turn off suspend
-- turn on night mode
-- display 144hz
-- mouse speed top
-- remove snap store
-sudo apt remove --purge snapd
-- install git
-sudo apt install git
-- add mflores to sudoers without password required
-sudo visudo -f /etc/sudoers.d/10-admins
-mflores ALL=(ALL) NOPASSWD: ALL
-- install google chrome
-- login on firefox and google chrome
-- install vim and setup as default
-sudo apt install vim -y
-sudo update-alternatives --config editor
-- create a directory where all repo will store
-mkdir ~/repo
-git clone private repo
-store git hub creentials
-- install sublim using repo
+mkdir ~/Pictures/FavoriteWallpapers; cp ./my-regolith/personal/astro-theme/astronaut.jpg ~/Pictures/FavoriteWallpapers
