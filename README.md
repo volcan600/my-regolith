@@ -140,14 +140,39 @@ vim ~/.zshrc
 git clone https://github.com/volcan600/my-regolith.git
 ```
 ## Enable Night Light
-Super + c > Displays > Night Light
+* Super + c > Displays > Night Light
 
 ## Install astro theme
+```bash
 sudo cp -r ./my-regolith/personal/astro-theme/astro /etc/regolith/styles/
+```
+
+```bash
 sudo cp -r ./my-regolith/personal/astro-theme/themes/* /usr/share/themes
+```
+
+```bash
 sudo cp -r ./my-regolith/personal/astro-theme/icons/* /usr/share/icons
+```
+
+```bash
 for f in ~/repo/my-regolith/personal/astro-theme/icons/*.tar.xz; do tar xf "$f"; done
+```
+
+```bash
 sudo mv ~/repo/Sweet-{Mars,Purple,Rainbow,Red,Yellow,Nebula} /usr/share/icons/
+```
+
+```bash
 for f in ~/repo/my-regolith/personal/astro-theme/themes/*.tar.xz; do tar xf "$f"; done
+```
+
+```bash
 sudo mv ~/repo/Sweet-{Dark,mars} /usr/share/themes/
+```
+
+```bash
 mkdir ~/Pictures/FavoriteWallpapers; cp ./my-regolith/personal/astro-theme/astronaut.jpg ~/Pictures/FavoriteWallpapers
+```
+
+* Check how to change look for [Regolith](https://regolith-linux.org/docs/customize/look/)
